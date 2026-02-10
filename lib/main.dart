@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         body: Center(
           child: Text(
-            'Flutter App',
+            'Flutter Downloaded SDK setup successfull',
             style: TextStyle(fontSize: 20),
           ),
         ),
