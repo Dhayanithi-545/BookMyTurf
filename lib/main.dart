@@ -15,7 +15,18 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
+
       home: AuthScreen(),
+=======
+      home: Scaffold(
+        body: Center(
+          child: Text(
+            'Flutter Downloaded SDK setup sucssfull',
+            style: TextStyle(fontSize: 20),
+          ),
+        ),
+      ),
+
     );
   }
 }
