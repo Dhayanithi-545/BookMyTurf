@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'stateless_stateful_demo.dart';
+import 'user_input_form.dart';
 
 class AuthScreen extends StatefulWidget {
   const AuthScreen({super.key});
@@ -88,6 +89,17 @@ class _AuthScreenState extends State<AuthScreen> {
               },
               icon: const Icon(Icons.widgets),
               label: const Text('View Widget Demo (Sprint-2)'),
+            ),
+            const SizedBox(height: 10),
+            OutlinedButton.icon(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const UserInputForm()),
+                );
+              },
+              icon: const Icon(Icons.edit_document),
+              label: const Text('View User Form Demo (Sprint-2)'),
             ),
           ],
         ),
