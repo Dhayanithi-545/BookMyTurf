@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'stateless_stateful_demo.dart';
 
 class AuthScreen extends StatefulWidget {
   const AuthScreen({super.key});
@@ -76,6 +77,17 @@ class _AuthScreenState extends State<AuthScreen> {
             TextButton(
               onPressed: () => setState(() => isLogin = !isLogin),
               child: Text(isLogin ? 'Create new account' : 'Already have an account? Login'),
+            ),
+            const Divider(),
+            OutlinedButton.icon(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const StatelessStatefulDemo()),
+                );
+              },
+              icon: const Icon(Icons.widgets),
+              label: const Text('View Widget Demo (Sprint-2)'),
             ),
           ],
         ),
