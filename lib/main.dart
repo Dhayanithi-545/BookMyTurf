@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'screens/auth_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -14,6 +15,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
+
+      home: AuthScreen(),
+=======
       home: Scaffold(
         body: Center(
           child: Text(
@@ -22,6 +26,8 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
+
     );
   }
 }
+
